@@ -25,11 +25,11 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 # Configurable Tech RSS Feeds (Greenhouse and Lever endpoints as targets)
-RSS_FEEDS = [
-    "https://boards.greenhouse.io/feeds/cohere/jobs",
-    "https://boards.greenhouse.io/feeds/openai/jobs",
-    "https://jobs.lever.co/co/google/rss",
-    "https://jobs.lever.co/co/lever/rss"
+JOB_FEEDS = [
+    "https://boards.greenhouse.io/v1/boards/cohere/jobs?rss=true",
+    "https://boards.greenhouse.io/v1/boards/openai/jobs?rss=true",
+    "https://jobs.lever.co/google/rss",
+    "https://jobs.lever.co/lever/rss"
 ]
 
 # Pydantic models for structured AI engine responses
